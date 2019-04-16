@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Pixel Arcade</title>
+
+  <!-- Bulma and Google Font -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+
+  <!-- Style sheets for each game -->
+  <link rel="stylesheet" href="style/index.css">
+  <link rel="stylesheet" href="style/pixel-art.css">
+  <link rel="stylesheet" href="style/bank-robba.css">
+
+  <!-- JS files for each game -->
+  <script defer type="text/javascript" src="src/index.js"></script>
+  <script defer type="text/javascript" src="src/pixel-art.js"></script>
+  <script defer type="text/javascript" src="src/bank-robba.js"></script>
+</head>
+
+<body>
+  <div id="arcade" class="columns">
+    <div id="nav-container" class="column is-2">
+      <h2 class="title is-4">Select Game</h2>
+      <div id="pixel-art" class="box select-game">
+        Pixel Art
+      </div>
+      <div id="bank-robba" class="box select-game">
+        Bank Robba
+      </div>
+      <div class="box select-game">
+        Snake
+      </div>
+      <div class="box select-game">
+        Pew Pew
+      </div>
+      <div class="box select-game">
+        Game five
+      </div>
+    </div>
+
+    <div id="game-container" class="column is-8">
+      <h2 id="game-title" class="title is-4">Pixel Arcade</h2>
+      <div class="box" id="game-box">
+      </div>
+    </div>
+
+    <div id="instructions" class="column is-2">
+      <h2 class="title is-6">Instructions</h2>
+    </div>
+  </div>
+</body>
+
+</html>
