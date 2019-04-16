@@ -5,7 +5,7 @@ const artBtn = document.getElementById('pixel-art')
 
 //Make the arcade fit the screen size
 const arcadeBox = document.getElementById('arcade')
-arcadeBox.style.height = window.innerHeight + 20 + "px"
+arcadeBox.style.height = window.innerHeight + 10 + "px"
 
 
 //Make a 2D array based on the 'size' chosen
@@ -17,14 +17,15 @@ function makeBoard(size) {
 function renderBoard(board, extraClass="") {
   let y = 0
   const boardEl = document.createElement('table')
+  boardEl.id = 'board'
   for (const row of board) {
     let x = 0
     const rowEl = document.createElement('tr')
+    rowEl.dataset.y = y
     for (const cell of row) {
       const cellEl = document.createElement('td')
       cellEl.className = "cell " + extraClass
       cellEl.dataset.x = x
-      cellEl.dataset.y = y
       rowEl.append(cellEl)
       x++
     }

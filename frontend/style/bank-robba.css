@@ -1,0 +1,24 @@
+.cop {
+  background-color: blue;
+  border: 1px solid lightgrey;
+}
+
+.robber {
+  background-color: red;
+  border: 1px solid lightgrey;
+}
+
+.gem {
+  background-color: green;
+  border: 1px solid lightgrey;
+}
+
+.portal {
+  background-color: orange;
+  border: 1px solid lightgrey;
+}
+
+.walls {
+  background-color: black;
+  border: 1px solid lightgrey;
+}

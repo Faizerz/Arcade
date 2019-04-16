@@ -46,7 +46,7 @@ document.addEventListener('click', event => {
 
     if (targetCellPaint == 'cell paint') {
       event.target.className = 'cell paint ' + state.color
-      state.board[parseInt(event.target.dataset.y)][parseInt(event.target.dataset.x)] = state.color
+      state.board[parseInt(event.target.parentElement.dataset.y)][parseInt(event.target.dataset.x)] = state.color
     } else if (selectedColor == "red") {
       state.color = "red"
     } else if (selectedColor == "blue") {
