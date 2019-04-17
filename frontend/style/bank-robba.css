@@ -22,3 +22,14 @@
   background-color: black;
   border: 1px solid lightgrey;
 }
+
+.key {
+  height:15px;
+  width:15px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+#key-list {
+  text-align: left;
+}

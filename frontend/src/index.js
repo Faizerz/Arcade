@@ -14,7 +14,7 @@ function makeBoard(size) {
 }
 
 //Render a board based on the size of the board given
-function renderBoard(board, extraClass="") {
+function renderBoard(board, extraClass = "") {
   let y = 0
   const boardEl = document.createElement('table')
   boardEl.id = 'board'
@@ -41,8 +41,6 @@ state = {
 }
 let newBoard = renderBoard(state.board)
 gameBox.append(newBoard)
-
-
 
 
 
