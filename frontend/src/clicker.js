@@ -19,8 +19,8 @@ document.addEventListener('click', event => {
           <p> See what happens!?</p><br>
         </div>
         `
+    
   //// BUTTON
-
   const table = document.getElementById("board")
       column = table.getElementsByTagName("tr")[2]
           cell = column.getElementsByTagName("td")[2]
@@ -29,8 +29,6 @@ document.addEventListener('click', event => {
                             <span class="slider"></span>
                            </label><br>
                           `
-          
-
 
 
 } } )
