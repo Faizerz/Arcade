@@ -1,4 +1,3 @@
-
 document.addEventListener('click', event => {
   if (event.target.id == 'space-invader') {
 
@@ -12,12 +11,6 @@ document.addEventListener('click', event => {
       <p> Defend Your Planet From An Alien Invasion!!</p><br>
       <p> Defender: &#11013; &#10132;</p><br>
       <p> Use [spacebar] to shoot! </p><br>
-      <!-- <div class="cell"></div><br>
-      <h2 class="title is-7">Key</h2>
-      <div class="cop key"></div>Cop<br><br>
-      <div class="robber key"></div>Robber<br><br>
-      <div class="gem key"></div>Gem<br><br>
-      <div class="portal key"></div>Portal<br> -->
     </div>
     `
 
