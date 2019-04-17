@@ -31,8 +31,8 @@ var ctx = canvas.getContext("2d");
 var ballRadius = 10;
 var x = canvas.width/2;
 var y = canvas.height-30;
-var dx = 2;
-var dy = -2;
+var dx = 5;
+var dy = -5;
 var paddleHeight = 10;
 var paddleWidth = 75;
 var paddleX = (canvas.width-paddleWidth)/2;
@@ -112,6 +112,8 @@ function drawPaddle() {
   ctx.closePath();
 }
 function drawBricks() {
+// const fez = document.create
+
   for(var c=0; c<brickColumnCount; c++) {
     for(var r=0; r<brickRowCount; r++) {
       if(bricks[c][r].status == 1) {
@@ -121,7 +123,7 @@ function drawBricks() {
         bricks[c][r].y = brickY;
         ctx.beginPath();
         ctx.rect(brickX, brickY, brickWidth, brickHeight);
-        ctx.fillStyle = "	#ffffff";
+        ctx.fillStyle = "#ffffff";
         ctx.fill();
         ctx.closePath();
       }
@@ -167,8 +169,8 @@ function draw() {
       else {
         x = canvas.width/2;
         y = canvas.height-30;
-        dx = 3;
-        dy = -3;
+        dx = 5;
+        dy = -5;
         paddleX = (canvas.width-paddleWidth)/2;
       }
     }
