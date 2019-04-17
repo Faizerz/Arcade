@@ -41,13 +41,3 @@ state = {
 }
 let newBoard = renderBoard(state.board)
 gameBox.append(newBoard)
-
-
-
-
-
-
-
-
-
-//
