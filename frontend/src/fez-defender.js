@@ -1,14 +1,14 @@
 document.addEventListener('click', event => {
-  if (event.target.id == 'space-invader') {
+  if (event.target.id == 'fez-defender') {
 
-    gameTitle.innerText = "Space Invader"
+    gameTitle.innerText = "Fez Defender"
     gameBox.innerHTML = ""
 
 /// INSTRUCTIONS PANEL
     instructBox.innerHTML = `
     <h2 class="title is-6">Instructions</h2><br>
     <div style="font-size: 12px;"
-      <p> Defend Your Planet From An Alien Invasion!!</p> <br>
+      <p> Use Fez To Defend Your Planet From An Alien Invasion!!</p> <br>
       <p> Defender: &#11013; &#10132; </p> <br>
     </div>
     `
@@ -31,8 +31,8 @@ var ctx = canvas.getContext("2d");
 var ballRadius = 10;
 var x = canvas.width/2;
 var y = canvas.height-30;
-var dx = 5;
-var dy = -5;
+var dx = 3;
+var dy = -3;
 var paddleHeight = 10;
 var paddleWidth = 75;
 var paddleX = (canvas.width-paddleWidth)/2;
@@ -88,7 +88,7 @@ function collisionDetection() {
           b.status = 0;
           score++;
           if(score == brickRowCount*brickColumnCount) {
-            alert("YOU WIN, CONGRATS!");
+            alert("YOU WIN, EARTH IS SAVED!!!");
             document.location.reload();
           }
         }
@@ -98,9 +98,12 @@ function collisionDetection() {
 }
 
 function drawBall() {
+const fez = document.createElement('img')
+      fez.src = "./public/fez.png"
   ctx.beginPath();
-  ctx.arc(x, y, ballRadius, 0, Math.PI*2);
-  ctx.fillStyle = "#ffffff";
+  ctx.drawImage(fez, x, y, 50, 50);
+  // ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+  // ctx.fillStyle = image;
   ctx.fill();
   ctx.closePath();
 }
@@ -112,8 +115,6 @@ function drawPaddle() {
   ctx.closePath();
 }
 function drawBricks() {
-// const fez = document.create
-
   for(var c=0; c<brickColumnCount; c++) {
     for(var r=0; r<brickRowCount; r++) {
       if(bricks[c][r].status == 1) {
@@ -142,7 +143,6 @@ function drawLives() {
 }
 
 function draw() {
-  // ctx.clearRect(0, 0, canvas.width, canvas.height);
   drawBricks();
   drawBall();
   drawPaddle();
