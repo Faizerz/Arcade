@@ -56,7 +56,6 @@ document.addEventListener('click', event => {
     </div>
     `
 
-
     changeDirection(state.player1)
     changeDirection(state.player2)
 
@@ -159,21 +158,21 @@ function lose(person) {
   if (person.class == 'blue') {
     alert(`Pink Wins`)
     document.getElementById('board').remove()
-    gameBox.innerHTML = `<div id='end-game' style='margin-top:200px;'><span style='color:deeppink'>Pink</span> Wins</div>`
+    gameBox.innerHTML = `<div id='end-game' style='margin-top:250px;'><span style='color:deeppink'>Pink</span> Wins</div>`
   } else if (person.class == 'pink') {
     alert(`Blue Wins`)
     document.getElementById('board').remove()
-    gameBox.innerHTML = `<div id='end-game' style='margin-top:200px;'><span style='color:deepskyblue'>Blue</span> Wins</div>`
+    gameBox.innerHTML = `<div id='end-game' style='margin-top:250px;'><span style='color:deepskyblue'>Blue</span> Wins</div>`
   }
 }
 
 function tronCollision(person) {
   let row = document.querySelector(`[data-y = '${person.head[0]}']`)
   let newPos = row.querySelector(`[data-x = '${person.head[1]}']`)
-    if(newPos.className == 'blue' || newPos.className == 'pink'){
-      lose(person)
-      return false;
-    }
+  if (newPos.className == 'blue' || newPos.className == 'pink') {
+    lose(person)
+    return false;
+  }
   return true
 }
 

@@ -3,6 +3,9 @@ let br = 0
 document.addEventListener('click', event => {
   if (event.target.id == 'bank-robba') {
 
+    clearInterval(p1move)
+    clearInterval(p2move)
+
     state = {
       game: 'Bank Robba',
       board: makeBoard(20),
