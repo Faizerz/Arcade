@@ -1,6 +1,9 @@
 document.addEventListener('click', event => {
   if (event.target.id == 'pixel-art') {
 
+    clearInterval(p1move)
+    clearInterval(p2move)
+
     state = {
       game: 'Pixel Art',
       board: makeBoard(15),
