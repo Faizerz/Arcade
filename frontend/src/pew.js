@@ -2,7 +2,16 @@ let pew = 0;
 let bullInterval
 
 document.addEventListener('click', event => {
-  if (event.target.id == 'pew-pew') {
+  if (event.target.id == 'pew') {
+
+    instructBox.innerHTML = `
+                            <h2 class="title is-6">Instructions</h2><br>
+                            <div style="font-size: 11px;"
+                              <p> Shoot your opponent... </p><br>
+                              <p> ...before they shoot you! </p><br>
+                            </div>
+                            `
+
 
     clearInterval(p1move)
     clearInterval(p2move)
@@ -37,6 +46,7 @@ document.addEventListener('click', event => {
     }
 
     gameBox.innerText = ""
+    gameBox.id = 'game-box'
     newBoard = renderBoard(state.board)
     gameBox.append(newBoard)
     gameTitle.innerText = "Pew Pew"

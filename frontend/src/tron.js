@@ -28,6 +28,7 @@ document.addEventListener('click', event => {
 
 
     gameBox.innerText = ""
+    gameBox.id = 'game-box'
     newBoard = renderBoard(state.board)
     gameBox.append(newBoard)
     gameTitle.innerText = "Tron"

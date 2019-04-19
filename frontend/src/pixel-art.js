@@ -11,6 +11,7 @@ document.addEventListener('click', event => {
     }
 
     gameBox.innerText = ""
+    gameBox.id = 'game-box'
     newBoard = renderBoard(state.board, 'paint')
     gameBox.append(newBoard)
     gameTitle.innerText = "Pixel Art"

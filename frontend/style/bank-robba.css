@@ -33,3 +33,13 @@
   margin-right: 10px;
   display: inline-block;
 }
+#game-box {
+  width: 550px;
+  height: 550px;
+  border: 1px solid grey;
+  border-radius: 0;
+  text-align: center;
+  margin: auto;
+  padding: 0px;
+  padding-bottom: 1px;
+}

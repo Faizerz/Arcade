@@ -3,15 +3,16 @@ document.addEventListener('click', event => {
 
     gameTitle.innerText = "Fez Defender"
     gameBox.innerHTML = ""
+    gameBox.id = 'game-box2'
 
 /// INSTRUCTIONS PANEL
     instructBox.innerHTML = `
-    <h2 class="title is-6">Instructions</h2><br>
-    <div style="font-size: 12px;"
-      <p> Use Fez To Defend Your Planet From An Alien Invasion!!</p> <br>
-      <p> Defender: &#11013; &#10132; </p> <br>
-    </div>
-    `
+                            <h2 class="title is-6">Instructions</h2><br>
+                            <div style="font-size: 12px;"
+                              <p> Use Fez To Defend Your Planet From An Alien Invasion!!</p> <br>
+                              <p> Defender: &#11013; &#10132; </p> <br>
+                            </div>
+                            `
 
 /// SET UP SPACE BACKGROUND
     const starfield = new Starfield();
@@ -31,8 +32,8 @@ var ctx = canvas.getContext("2d");
 var ballRadius = 10;
 var x = canvas.width/2;
 var y = canvas.height-30;
-var dx = 3;
-var dy = -3;
+var dx = 4;
+var dy = -4;
 var paddleHeight = 10;
 var paddleWidth = 75;
 var paddleX = (canvas.width-paddleWidth)/2;
@@ -101,7 +102,7 @@ function drawBall() {
 const fez = document.createElement('img')
       fez.src = "./public/fez.png"
   ctx.beginPath();
-  ctx.drawImage(fez, x, y, 50, 50);
+  ctx.drawImage(fez, x, y, 40, 40);
   // ctx.arc(x, y, ballRadius, 0, Math.PI*2);
   // ctx.fillStyle = image;
   ctx.fill();

@@ -1,0 +1,10 @@
+#game-box2 {
+  width: 750px;
+  height: 500px;
+  border: 1px solid grey;
+  border-radius: 0;
+  text-align: center;
+  margin: auto;
+  padding: 0px;
+  padding-bottom: 1px;
+}

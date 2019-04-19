@@ -32,8 +32,8 @@ Starfield.prototype.initialise = function(div) {
 	canvas.id = "canvas"
 	div.appendChild(canvas);
 	this.canvas = canvas;
-	this.canvas.width = 550;
-	this.canvas.height = 550;
+	this.canvas.width = 750;
+	this.canvas.height = 500;
 };
 
 Starfield.prototype.start = function() {

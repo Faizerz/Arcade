@@ -1,0 +1,55 @@
+/* html,body{
+    margin:0;
+    padding: 0;
+}
+
+body{
+   overflow: hidden;
+} */
+
+#game-box2 {
+  width: 750px;
+  height: 500px;
+  border: 1px solid grey;
+  border-radius: 0;
+  text-align: center;
+  margin: auto;
+  padding: 0px;
+  padding-bottom: 1px;
+}
+
+#left{
+    position: relative;
+    width: 10px;
+    height: 100px;
+    background-color: black;
+    float: left;
+}
+
+#right{
+    position: relative;
+    width: 10px;
+    height: 100px;
+    background-color: black;
+    float: right;
+}
+
+#ball{
+    position: relative;
+    width: 15px;
+    height: 15px;
+    background-color:black;
+    border-radius: 50%;
+}
+
+#deli,#scoreleft,#scoreright{
+    font-size: 100%;
+    color: black;
+    z-index: 10;
+}
+
+#goal{
+    font-size: 100%;
+    transition: 1.5s all;
+    display: inline-block;
+}

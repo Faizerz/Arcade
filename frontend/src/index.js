@@ -37,7 +37,7 @@ function renderBoard(board, extraClass = "") {
 
 //Initial state
 state = {
-  board: makeBoard(2)
+  board: makeBoard(1)
 }
 let newBoard = renderBoard(state.board)
 gameBox.append(newBoard)
