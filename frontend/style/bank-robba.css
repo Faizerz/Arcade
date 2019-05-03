@@ -1,20 +1,24 @@
 .cop {
   background-color: blue;
+  background-image: radial-gradient(blue, #2f57c3);
   border: 1px solid lightgrey;
 }
 
 .robber {
   background-color: red;
+  background-image: radial-gradient(red, #af2929);
   border: 1px solid lightgrey;
 }
 
 .gem {
-  background-color: green;
+  background-color: #0abf0a;
+  background-image: radial-gradient(#44de44, #358c35);
   border: 1px solid lightgrey;
 }
 
 .portal {
   background-color: orange;
+  background-image: radial-gradient(orange, darkorange);
   border: 1px solid lightgrey;
 }
 
@@ -28,4 +32,14 @@
   width:15px;
   margin-right: 10px;
   display: inline-block;
+}
+#game-box {
+  width: 550px;
+  height: 550px;
+  border: 1px solid grey;
+  border-radius: 0;
+  text-align: center;
+  margin: auto;
+  padding: 0px;
+  padding-bottom: 1px;
 }

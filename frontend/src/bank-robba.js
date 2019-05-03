@@ -3,6 +3,9 @@ let br = 0
 document.addEventListener('click', event => {
   if (event.target.id == 'bank-robba') {
 
+    clearInterval(p1move)
+    clearInterval(p2move)
+
     state = {
       game: 'Bank Robba',
       board: makeBoard(20),
@@ -24,18 +27,20 @@ document.addEventListener('click', event => {
     }
 
     gameBox.innerText = ""
+    gameBox.id = 'game-box'
     newBoard = renderBoard(state.board)
     gameBox.append(newBoard)
     gameTitle.innerText = "Bank Robba"
 
     instructBox.innerHTML = `
     <h2 class="title is-6">Instructions</h2><br>
-    <div style="font-size: 12px;"
-      <p>The Robber must steal 4 Gems to win</p><br>
+    <div style="font-size: 11px;"
+      <p>The Robber must steal 5 Gems to win</p><br>
       <p>The Cop must catch the robber</p><br>
       <p>Use Portals to traverse the map</p><br>
+      <p>Cops CAN'T move through Gems</p><br>
       <p>Robber: W A S D</p><br>
-      <p>Cop: &#8593; &#11013; &#8595; &#10132;</p><br>
+      <p>Cop: &#8593; <span style="font-size: 16px;">&#11013;</span> &#8595; <span style="font-size: 16px;">&#10140;</span></p><br>
       <div class="cell"></div><br>
       <h2 class="title is-7">Key</h2>
       <div class="cop key"></div>Cop<br><br>
@@ -142,7 +147,7 @@ function collisionCheck(position, playerClass) {
       return false
     } else if (position.className == 'gem') {
       state.gemCount++
-      if (state.gemCount == 4) {
+      if (state.gemCount == 5) {
         gameOver('robber')
       }
       return true

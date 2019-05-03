@@ -1,6 +1,9 @@
 document.addEventListener('click', event => {
   if (event.target.id == 'pixel-art') {
 
+    clearInterval(p1move)
+    clearInterval(p2move)
+
     state = {
       game: 'Pixel Art',
       board: makeBoard(15),
@@ -8,6 +11,7 @@ document.addEventListener('click', event => {
     }
 
     gameBox.innerText = ""
+    gameBox.id = 'game-box'
     newBoard = renderBoard(state.board, 'paint')
     gameBox.append(newBoard)
     gameTitle.innerText = "Pixel Art"
@@ -15,11 +19,9 @@ document.addEventListener('click', event => {
     instructBox.innerHTML = `
       <h2 class="title is-6">Instructions</h2><br>
       <div style="font-size: 12px;"
-        <p>Select a colour to paint a pixel</p><br>
-        <p>Click a pixel to fill it in that colour</p><br>
-        <p>Be as creative as you want</p><br>
-        <p>Save the picture once you're happy.</p><br>
-        <p>Remember the name as you will need it to load the picture back from the database</p>
+        <p>Select a colour to paint a pixel.</p><br>
+        <p>Click a pixel to fill it in that colour.</p><br>
+        <p>Be as creative as you want!</p><br>
       </div>
     `
 
