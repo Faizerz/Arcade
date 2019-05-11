@@ -1,29 +1,31 @@
 document.addEventListener('click', event => {
   if (event.target.id == 'pong') {
 
-    /// INSTRUCTIONS PANEL
-    instructBox.innerHTML = `
-                            <h2 class="title is-6">Instructions</h2><br>
-                            <div style="font-size: 11px;"
-                              <p> ... </p><br>
-                              <p> ... </p><br>
-                            </div>
-                            `
-    /// RENDER GAME BOARD
-    gameTitle.innerText = "Pong"
-    gameBox.innerHTML = ""
-    gameBox.id = 'game-box2'
+/// INSTRUCTIONS PANEL
+  instructBox.innerHTML = `
+                          <h2 class="title is-6">Instructions</h2><br>
+                          <div style="font-size: 11px;"
+                            <p> Random Pong! </p><br>
+                            <p> Play a friend 1v1! </p><br>
+                            <p> But beware the random </p><br>
+                            <p> generated ball! </p><br>
+                          </div>
+                          `
+/// RENDER GAME BOARD
+  gameTitle.innerText = "Pong"
+  gameBox.innerHTML = ""
+  gameBox.id = 'game-box'
 
-    const gameEl = document.createElement('div')
-    gameEl.innerHTML = `
+const gameEl = document.createElement('div')
+      gameEl.innerHTML = `
                       <div id="left"></div>
                       <div id="ball"></div>
                       <div id="right"></div>
                       `
-    gameBox.append(gameEl)
+      gameBox.append(gameEl)
 
-    const scoreEl = document.createElement('div')
-    scoreEl.innerHTML = `
+const scoreEl = document.createElement('div')
+      scoreEl.innerHTML = `
                         <center>
                         <span id="scoreleft"> 0 </span>
                         <span id="deli"> : </span>
@@ -31,13 +33,13 @@ document.addEventListener('click', event => {
                         <br>
                         <span id="goal"> GOAL !!! </span>
                         `
-    gameBox.append(scoreEl)
+      gameBox.append(scoreEl)
 
 
-    var ps = 15;
+var ps = 15
 
-    function nfp(urpx) {
-        return Number(urpx.replace("px", ""))
+function nfp(urpx) {
+  return Number(urpx.replace("px", ""))
     }
 
     var r = document.getElementById('right');
